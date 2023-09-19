@@ -1,3 +1,5 @@
+/* PostgreSQL used */
+
 /* Skills used: Joins, Subqueries/CTEs, Windows Functions, Aggregate Functions, Unions, Creating Views, Cases, Adding Data, Updating Data, 
 Cleaning/Transforming/Reformatting Data */
 
