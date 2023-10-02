@@ -22,7 +22,7 @@ The **Person Dataset** contains details for people involved in the crash.
 
 The **Vehicle and Person Datasets** are **fact tables** connected to the **Crash Dataset (the dimension table)**. The fact tables are connected to the dimension table via a **Star Schema Data Model** through the common column: **'collision_id'** with **many-to-one relationships (*:1)** 
 
-![data model](https://github.com/brandon11123/project/assets/146563849/ae68e126-a831-4a22-ac1b-a6712404c1bb)
+![data model](https://github.com/darianlee555/Portfolio-Projects/assets/145151765/e54e4ea7-c691-4d88-bbd9-52638aa9a712)
 
 ### Objectives
 
