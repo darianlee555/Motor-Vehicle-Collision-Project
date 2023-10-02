@@ -50,6 +50,8 @@ I wanted to answer the following questions using the data. I picked these specif
 The following **SQL** skills were used: Joins, Subqueries/CTEs, Windows Functions, Aggregate Functions, Unions, Creating Views, Cases, Adding Data, Updating Data, 
 Cleaning/Transforming/Reformatting Data.
 
+If interested here is the code:
+
 The following **Power BI** features were incorporated: DAX, Measures, Page Navigation/Buttons, Data Modelling/Relationships, Filters.
 
 ### Data Visualization/Dashboard
