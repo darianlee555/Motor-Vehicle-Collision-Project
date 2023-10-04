@@ -70,6 +70,7 @@ The following **Power BI** features were incorporated: DAX, Measures, Page Navig
 - A zoomable map is included with locations of fatalities for each borough so that the info about those particular collisions can be investigated further. 
 
 ### Analysis
+Here is the code used to obtain the following results: https://github.com/darianlee555/Portfolio-Projects/blob/main/SQL%20Motor%20Vehicle%20Crashes%20Code.sql
 - Driver Inattention/Distracted Driving was the most likely reason for a crash.
 - People aged 21 to 40 were most likely to get into car crashes.
 - Brooklyn has the most injuries and fatalies of any borough.
