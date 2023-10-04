@@ -28,7 +28,7 @@ The **Vehicle and Person Datasets** are **fact tables** connected to the **Crash
 
 ### Objectives
 
-I wanted to answer the following questions using the data. I picked these specific questions as they might be realistic questions that people might ask about the data:
+I wanted to answer the following questions using the data. 
 
 * What was the most common reason for a crash?
 * What ages were most likely to get into car crashes?
