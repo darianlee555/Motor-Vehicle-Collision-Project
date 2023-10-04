@@ -20,7 +20,7 @@ The **Crash Dataset** contains details on the crash event.
 
 The **Person Dataset** contains details for people involved in the crash.
 
-A description of each column of the datasets can be seen in the links above.
+More further details and a description of each column of the datasets can be seen in the data source links above.
 
 The **Vehicle and Person Datasets** are **fact tables** connected to the **Crash Dataset (the dimension table)**. The fact tables are connected to the dimension table via a **Galaxy Schema Data Model** through the common column: **'collision_id'** with **many-to-one relationships (*:1)** 
 
