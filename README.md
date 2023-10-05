@@ -2,8 +2,6 @@
 
 ### Project Overview
 
-![backasda](https://github.com/darianlee555/Portfolio-Projects/assets/145151765/2589553d-bc28-4033-8c40-f5a18bc48db3)
-
 This is an **SQL** and **Power BI** project analysing **NYC Motor Vehicle Collision datasets** made from NYPD accident reports. The point of this project is to answer crucial questions with regards to traffic safety in NYC by providing insights and hopefully improving traffic safety by recommending data-backed course of actions for NYC to prevent possible future collisions.
 
 ### Data Sources
