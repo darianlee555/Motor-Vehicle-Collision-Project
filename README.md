@@ -4,7 +4,7 @@
 
 ![head-on-collision (1)](https://github.com/darianlee555/Portfolio-Projects/assets/145151765/df3a5688-d1b2-4640-b683-49a8bd0e000d)
 
-This is an **SQL** and **Power BI** project analysing **NYC Motor Vehicle Collision datasets** made from NYPD accident reports. The point of this project is to answer crucial questions with regards to traffic safety in NYC by providing insights and hopefully improving traffic safety by recommending data-backed course of actions for NYC to prevent possible future collisions.
+This is an **SQL** and **Power BI** project analyzing NYC Motor Vehicle Collision datasets sourced from NYPD accident reports. The purpose of this project is to address critical questions related to traffic safety in NYC by providing insights and, ultimately, enhancing traffic safety through data-backed recommendations for the city to prevent potential future collisions.
 
 ### Data Sources
 
