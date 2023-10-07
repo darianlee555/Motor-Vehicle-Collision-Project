@@ -69,7 +69,7 @@ The following **Power BI** features were incorporated: DAX, Measures, Page Navig
 - The "Key Insights" from analyzing the data are put on the left-hand side to make them more obvious to users.
 - A zoomable map is included with locations of fatalities for each borough so that the info about those particular collisions can be investigated further. 
 
-### Analysis
+### Analysis/Results
 Here is the code used to obtain the following results: https://github.com/darianlee555/Portfolio-Projects/blob/main/SQL%20Motor%20Vehicle%20Crashes%20Code.sql
 - Driver Inattention/Distracted Driving was the most likely reason for a crash.
 - People aged 21 to 40 were most likely to get into car crashes.
@@ -84,7 +84,7 @@ Here is the code used to obtain the following results: https://github.com/darian
 - The number of total injuries is 609,150.
 - The number of total fatalities is 2,913.
 
-### Recommendations
+### Recommendations/Conclusions
 Based on the data, in order to prevent future vehicle collisions in NYC, I would encourage more advertisements about the dangers of distracted driving. I would have these ads target the demographic of males that are aged 21 to 40 as they tend to get into the most accidents. I would encourage more ads in Brooklyn specifically, as well as have more traffic directors or officers in Brooklyn since Brooklyn is the most dangerous borough with the most injuries and fatalies. I would also have more officers patrol traffic in all boroughs on Friday afternoons since that's the most likely timeframe that an accident will occur. Also, even though July is the month with the most crashes, it's clear that after April, there is a clear increase in the number of crashes as seen in the line chart graph. Therefore, I would focus more on increasing traffic safety measures from May onwards, as January through April have a somewhat low amount of crashes in comparison to other months. If all/any of these steps are taken, perhaps they will reduce the amount of future collisions NYC has. 
 
 ### More Screenshots showing Interactivity/Filters/Navigation
