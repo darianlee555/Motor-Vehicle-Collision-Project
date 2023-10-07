@@ -1,6 +1,6 @@
 /* PostgreSQL used */
 
-/* Skills used: Joins, Subqueries/CTEs, Windows Functions, Aggregate Functions, Unions, Creating Views, Cases, Adding Data, Updating Data, 
+/* Skills used: Joins, Subqueries/CTEs, Windows Functions, Aggregate Functions, String Functions, Unions, Creating Views, Cases, Adding Data, Updating Data, 
 Cleaning/Transforming/Reformatting Data */
 
 /* The following datasets were used:
