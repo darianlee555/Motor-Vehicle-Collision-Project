@@ -524,15 +524,18 @@ set day_of_week = to_char(timestamp, 'Dy');
 ALTER TABLE crash_data
 ADD hour_of_crash int
 ;
+
 update crash_data 
 set hour_of_crash = EXTRACT('hour' FROM timestamp);
 ALTER TABLE crash_data
 ADD Time_of_day varchar;
+
 update crash_data 
 set time_of_day = case when hour_of_crash between 0 and 11 then 'Morning (12 AM to 11:59 AM)' 
 when hour_of_crash between 12 and 17 then 'Afternoon (12 PM to 5:59 PM)' 
 else 'Evening (6 PM to 11:59 PM)' end
 ;
+
 select time_of_day, count(time_of_day) from crash_data
 group by 1;
 
