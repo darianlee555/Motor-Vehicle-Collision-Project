@@ -143,19 +143,7 @@ alter table person_data
 add Year int;
 update person_data
 set year = right(crash_date, 4)::int;
-
-/*combine latitude and longitude together to recreate the location column (should equal location column)*/
-select latitude, longitude, location, '(' || latitude || ', ' || longitude || ')' as location_recreated
-from crash_data
-where latitude is NOT null AND longitude is NOT null;
-
-/*Separate location column into separate latitude and longitude columns (should equal latitude and longitude columns)*/
-SELECT location, latitude, longitude,
-       TRIM(leading '(' FROM LEFT(location, POSITION(',' in location)-1)) AS latitude_recreated,
-       TRIM(trailing ')' FROM RIGHT(location, LENGTH(location) - STRPOS(location,','))) AS longitude_recreated
-  FROM crash_data
-where location is NOT NULL;        
-
+   
 /*Reformat Excel Date format (mm/dd/yyyy) to SQL date format (yyyy-mm-dd)*/
 select crash_date,
 right(crash_date, 4) || '-' || left(crash_date, 2) || '-' || substr(crash_date,4,2) as crash_date_reformatted
@@ -166,14 +154,6 @@ Update crash_data
 Set crash_date = right(crash_date, 4) || '-' || left(crash_date, 2) || '-' || substr(crash_date,4,2);
 alter table crash_data
 alter column crash_date type date using crash_date::date;
-
-/* Show all crashes that occurred at a parkway*/
-select * from crash_data
-where on_street_name ILIKE '%Parkway%' OR cross_street_name ILIKE '%Parkway%' OR off_street_name ILIKE '%Parkway%';
-
-/* Show all on_street_name values that start with Bronx*/
-select Distinct on_street_name from crash_data
-where on_street_name ILIKE 'Bronx%';
 
 /*Reformat Borough, On_Street_Name, Off_Street_Name, Cross_Street_Name Columns so that first letter is capitalized and the rest of the letters are in lowercase*/
 select borough, initcap(borough), on_street_name, initcap(on_street_name), 
@@ -197,15 +177,6 @@ from crash_data
 where borough IS NOT NULL
 group by borough
 order by 2 desc
-;
-
-/* find the total number of fatalities and total number of people injured by borough and zipcode and order first by borough and then by zipcode (both ascending)*/
-select borough, zip_code, sum(number_of_persons_killed) as Total_Fatalities, 
-sum(number_of_persons_injured) as Total_Amount_Injured
-from crash_data
-where borough IS NOT NULL AND Zip_Code is not null
-group by borough, zip_code
-order by 1, 2 
 ;
 
 --Find all of the unique values within the contributing_factor_vehicle columns.
@@ -437,14 +408,6 @@ from crash_data
 group by 1
 order by to_date(to_char(timestamp,'Month'),'Month');
 
-/* count the total number of crashes by borough, driver_license_status, and driver_sex */
-select borough, driver_license_status, driver_sex, count(crash.collision_id) as total_crashes from crash_data as crash
-join vehicle_data as vehicle
-on vehicle.collision_id = crash.collision_id
-join person_data as person
-on person.collision_id = crash.collision_id
-where borough IS NOT NULL AND Driver_license_status IS NOT NULL and driver_sex != 'U' and driver_sex IS NOT NULL
-group by borough, driver_license_status, driver_sex;
 
 /* show the total number of injuries, fatalities, and crashes by year */
 select year, 
@@ -478,24 +441,6 @@ order by to_date(month,'Month'), rank) as sub2
 where rank <=3
 ;
 
-/* Show the lowest 3 reasons for a crash */
-select contributing_factor, count(contributing_factor) as total_count
-from (select contributing_factor_vehicle_1 as contributing_factor from crash_data
-UNION ALL
-select contributing_factor_vehicle_2 from crash_data
-UNION ALL
-select contributing_factor_vehicle_3 from crash_data
-UNION ALL
-select contributing_factor_vehicle_4 from crash_data
-UNION ALL
-select contributing_factor_vehicle_5 from crash_data) as vehicle_contributing_factor
-where contributing_factor IS NOT NULL and contributing_factor != 'Unspecified'
-group by contributing_factor
-order by 2 asc
-limit 3;
-
-
-
 Create View combined_factors as 
 select borough, year, collision_id, contributing_factor_vehicle_1 as contributing_factor, vehicle_type_code_1 as vehicle_type from crash_data
 UNION ALL
@@ -511,10 +456,12 @@ select borough, year, collision_id, contributing_factor_vehicle_5, vehicle_type_
 Select driver_sex, count(unique_id) as total_crashes from vehicle_data
 where driver_sex != 'U' AND driver_sex is not null
 Group by 1;
+
 /* Show number of crashes by driver sex and year (include male and female only)*/
 Select driver_sex, year, count(unique_id) as total_crashes from vehicle_data
 where driver_sex != 'U' AND driver_sex is not null
 Group by 1, 2;
+
 /* Add a Month column that gives the month that each crash occurred*/
 ALTER TABLE crash_data
 ADD Month varchar,
@@ -525,28 +472,6 @@ update crash_data
 set Month = to_char(timestamp, 'Mon'),
 Month_number = extract('month' from timestamp) 
 ;
-
-/* Show the vehicle_types that are most associated with a crash, exclude unknown values*/
-select vehicle_type, count(vehicle_type) as count 
-from combined_factors
-where vehicle_type is NOT NULL AND vehicle_type != 'Unknown'
-group by vehicle_type
-order by 2 desc;
-
-/* Show the vehicle_types that are most associated with a crash and group by borough as well, 
-show top 5 only for each borough, exclude unknown*/
-select * 
-from (
-select *, rank() over (partition by borough order by count desc) as rank
-from (
-select borough, vehicle_type, count(vehicle_type) as count 
-from combined_factors
-where borough IS NOT NULL AND Vehicle_type is not null AND vehicle_type != 'Unknown'
-group by vehicle_type, borough
-order by 1,3 desc
-) as sub
-) as sub2
-where rank <= 5;
 
 /* Show a count of the type of injuries in desc order, don’t include 'Does Not Apply' or 'Unknown' or NULLS*/
 select bodily_injury, count(bodily_injury) as count 
