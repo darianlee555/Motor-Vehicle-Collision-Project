@@ -84,11 +84,7 @@ Here is the code used to obtain the following results/insights: https://github.c
 - The number of total fatalities is 2,913.
 
 ### Recommendations/Conclusions
-Based on the data, in order to prevent future vehicle collisions in NYC, I would encourage more advertisements about the dangers of distracted driving. These ads should target the demographic of males aged 21 to 40, as they tend to be involved in the most accidents. Additionally, it's advisable to increase advertising efforts in Brooklyn specifically, as well as deploy more traffic directors or officers in Brooklyn, given that it is the most dangerous borough with the highest number of injuries and fatalities.
-
-Furthermore, I recommend deploying more officers to patrol traffic in all boroughs on Friday afternoons, as this is the most likely timeframe for accidents to occur. While July has the highest number of crashes, it's worth noting that there is a clear increase in accidents after April, as shown in the line chart. Therefore, I would focus on increasing traffic safety measures from May onwards, as January through April generally have fewer crashes compared to other months.
-
-By implementing any/all of these steps, it is possible that NYC can reduce the number of future collisions.
+Based on the data, in order to prevent future vehicle collisions in NYC, I would encourage more advertisements about the dangers of distracted driving. These ads should target the demographic of males aged 21 to 40, as they tend to be involved in the most accidents. Additionally, it's advisable to increase advertising efforts in Brooklyn specifically, as well as deploy more traffic directors or officers in Brooklyn, given that it is the most dangerous borough with the highest number of injuries and fatalities. Furthermore, I recommend deploying more officers to patrol traffic in all boroughs on Friday afternoons, as this is the most likely timeframe for accidents to occur. And while July has the highest number of crashes, it's worth noting that there is a clear increase in accidents after April, as shown in the line chart. Therefore, I would focus on increasing traffic safety measures from May onwards, as January through April generally have fewer crashes compared to other months. By implementing any/all of these steps, it is possible that NYC can reduce the number of future collisions.
 
 ### More Screenshots showing Interactivity/Filters/Navigation
 ![](Media3.gif)
