@@ -70,18 +70,18 @@ The following **Power BI** features were incorporated: DAX, Measures, Page Navig
 
 ### Analysis/Results/Insights
 Here is the code used to obtain the following results/insights: https://github.com/darianlee555/Portfolio-Projects/blob/main/SQL%20Motor%20Vehicle%20Crashes%20Code.sql
-- Driver Inattention/Distracted Driving was the most likely reason for a crash.
-- People aged 21 to 40 were most likely to get into car crashes.
-- Brooklyn has the most injuries and fatalies of any borough.
-- July has the most crashes of any month.
-- Males are more likely to get into a crash then females.
-- Back injuries were the most common injury in a crash.
-- Crashes involving two vehicles (double vehicle crash) were the most common type of crash with 1,502,012 total collisions.
-- Friday has the most accidents of any day.
-- Most accidents occur in the afternoon.
-- The number of total crashes is 2,016,265.
-- The number of total injuries is 609,150.
-- The number of total fatalities is 2,913.
+- **Primary Cause of Crashes**: Driver Inattention/Distracted Driving emerged as the leading cause of motor vehicle crashes.
+- **Age Group Most Prone to Crashes**: Individuals aged 21 to 40 were found to be the most susceptible to crashes.
+- **Borough with Highest Incidents**: Brooklyn reported the highest number of injuries and fatalities among all boroughs.
+- **Peak Month for Crashes**: The month of July experienced the highest number of recorded crashes.
+- **Gender and Crash Likelihood**: Males were more frequently involved in accidents compared to females.
+- **Common Injury Type**: Back injuries were the most prevalent injury resulting from crashes.
+- **Most Common Crash Type**: Collisions involving two vehicles (double vehicle crashes) were the most commonly reported type of crash, accounting for 1,502,012 incidents.
+- **Busiest Day**: Fridays emerged as the day with the highest number of accidents.
+- **Busiest Time**: Most accidents occurred during the afternoon.
+- **Total Crashes**: The dataset documented a total of 2,016,265 crashes.
+- **Total Injuries**: There were 609,150 reported injuries in the dataset.
+- **Total Fatalities**: The dataset recorded a total of 2,913 fatalities.
 
 ### Recommendations/Conclusions
 Based on the data, in order to prevent future vehicle collisions in NYC, I would encourage more advertisements about the dangers of distracted driving. These ads should target the demographic of males aged 21 to 40, as they tend to be involved in the most accidents. Additionally, it's advisable to increase advertising efforts in Brooklyn specifically, as well as deploy more traffic directors or officers in Brooklyn, given that it is the most dangerous borough with the highest number of injuries and fatalities. Furthermore, I recommend deploying more officers to patrol traffic in all boroughs on Friday afternoons, as this is the most likely timeframe for accidents to occur. And while July has the highest number of crashes, it's worth noting that there is a clear increase in accidents after April, as shown in the line chart. Therefore, I would focus on increasing traffic safety measures from May onwards, as January through April generally have fewer crashes compared to other months. By implementing any/all of these steps, it is possible that NYC can reduce the number of future collisions.
