@@ -60,7 +60,8 @@ The following **Power BI** features were incorporated: DAX, Measures, Page Navig
 
 ![Screenshot (18)](https://github.com/darianlee555/Portfolio-Projects/assets/145151765/8381b284-ebda-4cf9-8d33-370d13ba8cf8)
 
-![Screenshot (19)](https://github.com/darianlee555/Portfolio-Projects/assets/145151765/257386b4-4b9e-4a12-834e-9e1a69e44b47)
+![previous info](https://github.com/darianlee555/Motor-Vehicle-Collision-Project/assets/145151765/42608f81-8d43-40ae-897f-e843626c6e24)
+
 
 ### Features:
 - "More Info" and "Previous Info" are navigational buttons that allow the user to navigate easily through the two pages of the dashboard.
